@@ -1,0 +1,43 @@
+---
+title: "Prediction Model Benchmarking for Small Datasets"
+author: "Jacob Miller"
+date: "June 29, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+data(ToothGrowth)
+```
+
+
+## Prediction Models and Small Sample Size
+
+- It is notoriously difficult to produce good prediction models based on smaller datasets
+- It is difficult to know how much of a small dataset (if any) should be assigned to the training set versus the testing set
+- The purpose of this Shiny App is to demonstrate these two concepts and the inherent difficulties of predictions based on small sample size.
+
+## Data Source and Data Information
+
+- The app pulls from the ToothGrowth dataset built into R
+- This ToothGrowth dataset consists of 60 observations measuring the pace of tooth growth of guinea pigs exposed to different doseages and methods of delivery of vitamin C.
+- From the description of the datset: "The response is the length of odontoblasts (cells responsible for tooth growth) in 60 guinea pigs. Each animal received one of three dose levels of vitamin C (0.5, 1, and 2 mg/day) by one of two delivery methods, (orange juice or ascorbic acid (a form of vitamin C and coded as VC)."
+- As can be demonstrated graphically, the smaller data set limit the predictive capacity of the models.
+
+## Graphical Example of Dataset
+```{r Graph, echo = TRUE}
+plot_ly(data = ToothGrowth, y = ~len, x= ~dose, color = ~supp, type = "box")
+```
+
+## Conclusion
+
+- This app is ideal for presenting the limitations of predictions of smaller datasets for students
+- The app also demonstrate the dangers of overfitting using more sophisticated prediction models 
+- Finally, the lack of improvement from more sophisticated models over linear regression can be demonstrated.
+
+## Full Code and Link to App
+
+- The full code for this Shiny App can be found at https://github.com/jakenmiller/shiny-app-and-presentation
+- The app itself can be found at https://jacobnmiller.shinyapps.io/prediction-comparisons/
+
