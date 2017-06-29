@@ -13,7 +13,7 @@ options(warn = -1)
 ```
 
 
-## Prediction Models and Small Sample Size
+## Prediction Models and Small Sample Sizes
 
 - It is notoriously difficult to produce good prediction models based on smaller datasets
 - It is difficult to know how much of a small dataset (if any) should be assigned to the training set versus the testing set
