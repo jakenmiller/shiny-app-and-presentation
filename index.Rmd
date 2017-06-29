@@ -36,9 +36,5 @@ plot_ly(data = ToothGrowth, y = ~len, x= ~dose, color = ~supp, type = "box")
 - This app is ideal for presenting the limitations of predictions of smaller datasets for students
 - The app also demonstrate the dangers of overfitting using more sophisticated prediction models 
 - Finally, the lack of improvement from more sophisticated models over linear regression can be demonstrated.
-
-## Full Code and Link to App
-
 - The full code for this Shiny App can be found at https://github.com/jakenmiller/shiny-app-and-presentation
 - The app itself can be found at https://jacobnmiller.shinyapps.io/prediction-comparisons/
-
